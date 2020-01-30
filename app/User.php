@@ -3,34 +3,34 @@
 namespace OOP;
 
 class User{
-    private $model;
-    private $brand;
-    private $price;
-    private $weight;
-    private $engine;
-    private $speed;
-    private $info;
-    private $seats;
+    protected $model;
+    protected $brand;
+    protected $price;
+    protected $weight;
+    protected $engine;
+    protected $speed;
+    protected $info;
+    protected $seats;
 
     public function __construct($model, $brand){
         $this->model = $model;
         $this->brand = $brand;
 
     }
-    public function show(){
+    public function profile(){
         $data [] = $this->brand;
         $data [] = $this->model;
 
         return $data;
     }
-    public function addPrice($price){
-        $this->price = $price;
+    public function addComment($comment){
+        $this->comment = $comment;
     }
-    public function showPrice()
+    public function showComment()
     {
-        $priceInfo = $this->price;
+        $commentInfo = $this->comment;
 
-        return $priceInfo;
+        return $commentInfo;
     }
     public function addWeight($weight){
         $this->weight = $weight;
